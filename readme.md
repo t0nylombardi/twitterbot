@@ -38,9 +38,8 @@ this step once -- you can use the same app setup for other bots too.
 
 2. Put in whatever name, description, and website you want.
 
-3. Take the api kEY values, and enter them in the script. It should look like this:
+3. Take the api kEY values, and enter them in lib/bot.rb. It should look like this:
 
- 		 ---
          api_keys = {
   			consumer_key:        'CONSUMER KEY GOES HERE',
   			consumer_secret:     'CONSUMER SECRET GOES HERE',
@@ -56,7 +55,7 @@ Run TwitterBot
 
 Run the script from within the folder. 
 
-    ruby twitterbot.rb tweets.txt keyword1 keyword2 keyword3 keyword4 
+   	-> ruby twitterbot.rb tweets.txt keyword1 keyword2 keyword3 keyword4 
 
 You can add all the keywords you want. Keywords must be oneword phrases: 
 	
@@ -79,7 +78,11 @@ to can be included:
 
 	@randomName "sentemce thats less or equal to 120 charaters" 
 
-that would be tweeted 
+^that would be tweeted^ 
+
+Any new file should be put in the main directory and listed when running the file 
+
+	-> ruby twitterbot.rb newfile.txt keyword1 keyword2 keyword3 keyword4 etc
 
 
 
