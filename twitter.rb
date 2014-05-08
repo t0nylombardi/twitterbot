@@ -17,11 +17,10 @@ keywords  =   []
 keywords  +=  ARGV
 
 
-api_keys = {
-  consumer_key:        '1234',
-  consumer_secret:     '1234',
-  access_token:        '1234',
-  access_token_secret: '1234' }
+api_keys = {  consumer_key:        'CONSUMER KEY GOES HERE',
+              consumer_secret:     'CONSUMER SECRET GOES HERE',
+              access_token:        'ACCESS TOKEN GOES HERE',
+              access_token_secret: 'ACCESS TOKEN SECRET' }
 
 
 file = File.open(text_file, "r").each_line do |line|
@@ -44,7 +43,7 @@ TweetStream.configure do |config|
   config.auth_method          = :oauth
 end
 
-puts "conected ...\n"
+puts "connected ...\n"
 
 begin
   TweetStream::Client.new.on_error do |message|
@@ -64,7 +63,7 @@ rescue Twitter::Error::Unauthorized
 rescue Twitter::Error
   sleep(200)
 rescue Twitter::Error::ServiceUnavailable
-  puts "Service is Unavailable waiting for 5 minutes..."
+  puts "Service is unavailable waiting for 5 minutes..."
   sleep(60*5)
   retry
   puts "This request looks like it might be automated."
