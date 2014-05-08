@@ -60,12 +60,12 @@ class Bot
         sleepn = rand(1..120)# anywhere from 1sec -2mins 
         client.update("@#{status.user.screen_name} #{@tweets[tweetn]}")
         printf "%-5s %s\n",
-              "#{@count}: #{status.user.screen_name.rjust(10)}", @tweets[tweetn]
+          "#{@count}: #{status.user.screen_name.rjust(10)}", @tweets[tweetn]
         sleep sleepn
         @count += 1  
       end
     rescue Twitter::Error::Unauthorized
-      #break
+      abort("Unauthorized.")
     rescue Twitter::Error
       sleep(200)
     rescue Twitter::Error::ServiceUnavailable
