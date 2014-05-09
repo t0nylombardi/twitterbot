@@ -9,14 +9,12 @@ class Tweet
   def self.filepath=(path=nil)
     @@filepath = File.join(APP_ROOT, path)
   end
-  
-  attr_accessor :name, :cuisine, :price
-  
+
   def self.file_exists?
     # class should know if the tweets file exists
-    @@filepath && File.exists?(@@filepath) ? true : false  
+    @@filepath && File.exists?(@@filepath) ? true : false
   end
-  
+
   def self.file_usable?
     return false unless @@filepath
     return false unless File.exists?(@@filepath)
@@ -36,5 +34,5 @@ class Tweet
     end
     tweets
   end
-    
+
 end
