@@ -3,12 +3,10 @@
 #   $Id$
 #++
 require 'tweet'
-
-
 class Bot
 
   def initialize(path=nil)
-    # locate the restaurant text file at path
+    # locate the tweet text file at path
     Tweet.filepath = path
     if Tweet.file_usable?
       puts "Found tweet file."

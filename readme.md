@@ -63,7 +63,7 @@ You can add all the keywords you want. Keywords must be oneword phrases:
 
 That's it!
 
-Chatterbot uses the the Twitter gem
+TwitterBot uses the the Twitter gem
 (https://github.com/sferik/twitter) to handle the underlying API
 calls. Any calls to the search/reply methods will return
 Twitter::Status objects, which are basically extended hashes.
@@ -77,8 +77,6 @@ Should be less than 120 characters so that the username your tweeting
 to can be included: 
 
 	@randomName "sentemce thats less or equal to 120 charaters" 
-
-^that would be tweeted^ 
 
 Any new file should be put in the main directory and listed when running the file 
 
